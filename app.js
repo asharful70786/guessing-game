@@ -6,7 +6,6 @@ function generateRandomNumber() {
 }
 
 function resetGame() {
-    // Clear the paragraph content
     resultParagraph.textContent = "";
 }
 
@@ -20,13 +19,10 @@ function checkGuess() {
 
         if (guess === randomNumber) {
             resultParagraph.textContent = "Congratulations! You guessed the correct number: " + randomNumber;
-            // Generate a new random number for the next round
             randomNumber = generateRandomNumber();
         } else {
             resultParagraph.textContent = "Wrong answer. Try again!";
         }
-
-        // Clear the input field for the next guess
         document.getElementById("guessInput").value = "";
     }
 }
